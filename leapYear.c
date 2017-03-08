@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
 	int user_year;
 	while (user_year != -1) {
-		printf("Choose a year:\n");
+		printf("please enter the year you are interested in\n");
 		scanf("%d", &user_year);
 		
 		if (user_year != -1) {
@@ -29,9 +29,9 @@ int main(int argc, char *argv[]) {
 			int leapResult = isLeapYear(user_year);
 
 			if (leapResult == TRUE) {
-				printf("This is a leap year.\n");
+				printf("%d is a leap year!\n", user_year);
 			} else {
-				printf("This is not a leap year.\n");
+				printf("%d is not a leap year!\n", user_year);
 			}
 		}
 	}
@@ -48,7 +48,7 @@ int isLeapYear(int year) {
 		return TRUE;
 	}
 	// every century is not a leap year
-	if (year % 4 == 0 && (! year % 100 == 0)) {
+	if (year % 4 == 0 && !( year % 100 == 0)) {
 		return TRUE;
 	} else {
 		return FALSE;
